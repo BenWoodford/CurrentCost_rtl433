@@ -13,10 +13,8 @@ sudo docker run --name rtl_433 -d \
 -e MQTT_PASS=password \
 -e MQTT_TOPIC=your/topic/name \
 --privileged -v /dev/bus/usb:/dev/bus/usb \
---name honeywell2mqtt chriskacerguis/honeywell2mqtt
+--name hijinx/CurrentCost_rtl433
 ```
-
-docker run --name rtl_433 -d -e MQTT_HOST=hassio.local -e MQTT_USER=sensors -e MQTT_PASS=sensorsmqtt123 --privileged -v /dev/bus/usb:/dev/bus/usb hijinx/rtl433test:Use-sysrun_rpi-rtl_433-as-base-image
 
 ## MQTT Data
 
@@ -39,9 +37,8 @@ Its power0 that provides the reading that is desired.
 
 ## Hardware
 
-This has been tested and used with the Current Cost EnviR with clamp.
-
-However, it should work just fine with any Honeywell RF sensors transmitting on 345Mhz.
+This has been tested and used with the Current Cost EnviR with clamp - e.g.:
+http://i.ebayimg.com/images/g/bzcAAOSwZuRZu6JB/s-l1600.jpg
 
 
 ## Troubleshooting
@@ -57,3 +54,7 @@ Then run the following command on the host
 ```bash
 sudo rmmod dvb_usb_rtl28xxu rtl2832
 ```
+
+Also it may be required to determine tuning offset (ppm) per this instruction:
+http://davidnelson.me/?p=371
+(Currently the ppm for my receiver is hardcoded in the script... should be an env var really).
