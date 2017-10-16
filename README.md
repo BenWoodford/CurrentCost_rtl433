@@ -27,11 +27,13 @@ Data to the MQTT server will look like this
     "time" : "2017-10-16 20:53:09", 
     "model" : "CurrentCost TX", 
     "dev_id" : 3063, 
-    "power0" : 617,     <<<< this is the one we're interested in :)
+    "power0" : 617,
     "power1" : 0, 
     "power2" : 0
 }
 ```
+
+Its power0 that provides the reading that is desired.
 
 **The default topic is:** ```homeassistant/sensor/currentcost```
 
