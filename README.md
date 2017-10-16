@@ -1,6 +1,6 @@
-# honeywell2mqtt
-A Docker image for a software defined radio tuned to listen for Honeywell RF security sensors at 345Mhz.  This is based off of Marco Verleun's 
-awesome rtl2mqtt image, but adpated just for Honeywell products (and working with Home Assistant)
+# rtl433test
+A Docker image for a software defined radio tuned to listen for Current Cost power consumption sensors at 433MHz.  This is based off of Marco Verleun's 
+awesome rtl2mqtt image, and chriskacerguis honeywell2mqtt.
 
 ## Usage
 
@@ -15,6 +15,8 @@ sudo docker run --name rtl_433 -d \
 --privileged -v /dev/bus/usb:/dev/bus/usb \
 --name honeywell2mqtt chriskacerguis/honeywell2mqtt
 ```
+
+docker run --name rtl_433 -d -e MQTT_HOST=hassio.local -e MQTT_USER=sensors -e MQTT_PASS=sensorsmqtt123 --privileged -v /dev/bus/usb:/dev/bus/usb hijinx/rtl433test:Use-sysrun_rpi-rtl_433-as-base-image
 
 ## MQTT Data
 
@@ -32,15 +34,11 @@ Data to the MQTT server will look like this
 }
 ```
 
-**The default topic is:** ```homeassistant/sensor/honeywell```
+**The default topic is:** ```homeassistant/sensor/currentcost```
 
 ## Hardware
 
-This has been tested and used with the following hardware (you can get it on Amazon)
-
-- Honeywell Ademco 5818MNL Recessed Door Transmitter
-- 5800MINI Wireless Door/Window Contact by Honeywell
-- NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB
+This has been tested and used with the Current Cost EnviR with clamp.
 
 However, it should work just fine with any Honeywell RF sensors transmitting on 345Mhz.
 
