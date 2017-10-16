@@ -24,13 +24,12 @@ Data to the MQTT server will look like this
 
 ```json
 {
-    "time" : "2017-08-17 13:18:58", 
-    "model" : "Honeywell Door/Window Sensor", 
-    "id" : 547651, 
-    "channel" : 8, 
-    "event" : 4, 
-    "state" : "closed", 
-    "heartbeat" : "yes"
+    "time" : "2017-10-16 20:53:09", 
+    "model" : "CurrentCost TX", 
+    "dev_id" : 3063, 
+    "power0" : 617,     <<<< this is the one we're interested in :)
+    "power1" : 0, 
+    "power2" : 0
 }
 ```
 
