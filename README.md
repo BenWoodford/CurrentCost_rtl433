@@ -7,7 +7,7 @@ awesome rtl2mqtt image, and chriskacerguis honeywell2mqtt.
 To run the container, use the following:
 
 ```
-sudo docker run --name rtl_433 -d \
+sudo docker run --name currentcost_rtl433 -d \
 -e MQTT_HOST=<mqtt-broker.example.com> \
 -e MQTT_USER=username \
 -e MQTT_PASS=password \
