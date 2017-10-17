@@ -1,6 +1,5 @@
-# rtl433test
-A Docker image for a software defined radio tuned to listen for Current Cost power consumption sensors at 433MHz.  This is based off of Marco Verleun's 
-awesome rtl2mqtt image, and chriskacerguis honeywell2mqtt.
+# CurrentCost_rtl433
+A Docker image for a software defined radio tuned to listen for Current Cost power consumption sensors at 433MHz.  This is based off of Marco Verleun's awesome rtl2mqtt image, and chris kacerguis honeywell2mqtt derivitave.  It uses an out data docker image of rtl_sdr and rtl_433 from sysrun/rtl_433. This is needed because current versions are problematic with my RTL DVB-T dongle...
 
 ## Usage
 
@@ -57,4 +56,4 @@ sudo rmmod dvb_usb_rtl28xxu rtl2832
 
 Also it may be required to determine tuning offset (ppm) per this instruction:
 http://davidnelson.me/?p=371
-(Currently the ppm for my receiver is hardcoded in the script... should be an env var really).
+(Currently the ppm for my receiver own is hardcoded in the script... should be an env var really).
