@@ -1,5 +1,5 @@
 # CurrentCost_rtl433
-A Docker image for a software defined radio tuned to listen for Current Cost power consumption sensors at 433MHz.  This is based off of Marco Verleun's awesome rtl2mqtt image, and chris kacerguis honeywell2mqtt derivitave.  It uses an out data docker image of rtl_sdr and rtl_433 from sysrun/rtl_433. This is needed because current versions are problematic with my RTL DVB-T dongle...
+A Docker image for a software defined radio tuned to listen for Current Cost power consumption sensors at 433MHz.  This is based off of Marco Verleun's awesome rtl2mqtt image, and chris kacerguis honeywell2mqtt derivitave.  It uses an out-of-date docker image of rtl_sdr and rtl_433 from sysrun/rtl_433 (approx 1 year old). This is needed because current versions are problematic with my RTL DVB-T dongle...
 
 ## Usage
 
